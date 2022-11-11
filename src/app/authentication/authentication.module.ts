@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { Routes,RouterModule} from '@angular/router';
 import { NopageComponent } from './nopage/nopage.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const route:Routes=[
   {path:'', component:AuthComponent},
@@ -15,8 +16,8 @@ const route:Routes=[
 
 @NgModule({
   imports: [
-    CommonModule,RouterModule.forRoot(route)
+    CommonModule,RouterModule.forRoot(route),ReactiveFormsModule
   ],
-  declarations: [AuthComponent,HomeComponent,LoginComponent]
+  declarations: [AuthComponent,HomeComponent,LoginComponent,NopageComponent]
 })
 export class AuthenticationModule { }
