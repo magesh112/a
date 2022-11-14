@@ -8,6 +8,8 @@ import { NopageComponent } from './nopage/nopage.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PracticeService } from './practice.service';
 
+
+
 const route: Routes = [
   { path: '', component: AuthComponent },
   { path: 'home', component: HomeComponent },
@@ -21,8 +23,8 @@ const route: Routes = [
     RouterModule.forRoot(route),
     ReactiveFormsModule,
     ReactiveFormsModule,
-  ],
-  declarations: [AuthComponent, HomeComponent, LoginComponent, NopageComponent],
+   ],
+   declarations: [AuthComponent, HomeComponent, LoginComponent, NopageComponent],
   providers:[PracticeService]
 })
 export class AuthenticationModule {}

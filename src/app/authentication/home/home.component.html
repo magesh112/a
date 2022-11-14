@@ -4,6 +4,8 @@
   Ab/present:<input type="text" formControlName="abp" /><br />
   <button (click)="addFunction()">Add</button>
 </form>
+<label>Search</label>
+<input type="text" placeholder="search here" />
 <table>
   <tr>
     <th>Emp.Name</th>
@@ -11,7 +13,6 @@
     <th>Ab/present</th>
   </tr>
 
-  <tr></tr>
   <tr *ngFor="let data of value">
     <td>{{ data.empname }}</td>
     <td>{{ data.empid }}</td>

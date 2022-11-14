@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
     abp: new FormControl(''),
   });
   constructor(private service: PracticeService) {}
+  search:any;
 
   ngOnInit() {
     this.value = this.service.arr;
