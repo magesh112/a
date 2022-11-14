@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { AuthenticationModule } from './authentication/authentication.module';
 
+
 const route:Routes=[
   {path:'auth',redirectTo:'authentication',pathMatch:'full'},
    { path:'authentication', 
