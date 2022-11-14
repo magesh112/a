@@ -3,21 +3,26 @@ import { CommonModule } from '@angular/common';
 import { AuthComponent } from './auth/auth.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { Routes,RouterModule} from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { NopageComponent } from './nopage/nopage.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PracticeService } from './practice.service';
 
-const route:Routes=[
-  {path:'', component:AuthComponent},
-  {path:'home', component:HomeComponent},
-  {path:'login', component:LoginComponent},
-  {path:'**', component:NopageComponent}
+const route: Routes = [
+  { path: '', component: AuthComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: '**', component: NopageComponent },
 ];
 
 @NgModule({
   imports: [
-    CommonModule,RouterModule.forRoot(route),ReactiveFormsModule
+    CommonModule,
+    RouterModule.forRoot(route),
+    ReactiveFormsModule,
+    ReactiveFormsModule,
   ],
-  declarations: [AuthComponent,HomeComponent,LoginComponent,NopageComponent]
+  declarations: [AuthComponent, HomeComponent, LoginComponent, NopageComponent],
+  providers:[PracticeService]
 })
-export class AuthenticationModule { }
+export class AuthenticationModule {}
